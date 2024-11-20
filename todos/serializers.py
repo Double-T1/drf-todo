@@ -23,5 +23,13 @@ class TodoSerializer(serializers.ModelSerializer):
         fields = (
             'title',
             'context',
-            'deadline'
+            'deadline',
+            'owner',
+            'created_at',
+            'updated_at'
+        )
+        read_only_fields = (
+            'owner',
+            'created_at',
+            'updated_at'
         )
